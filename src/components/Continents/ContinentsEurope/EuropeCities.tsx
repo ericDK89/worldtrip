@@ -10,25 +10,26 @@ interface EuropeCitiesProps {
 export function EuropeCities({ img, title, text, icon }: EuropeCitiesProps) {
   return (
     <>
-      <Flex>
-        <Box
-          w="256px"
-          h="279px"
-          border="1px"
-          borderTop="0px"
-          borderColor="yellow.500"
-          borderRadius="5px"
-        >
-          <Image src={img} alt={title} w="256px" h="173px" />
-          <Flex justifyContent="center" align="center">
-            <Box pl="24px">
-              <Heading fontFamily="Barlow">{title}</Heading>
-              <Text>{text}</Text>
-            </Box>
-            <Image src={icon} alt={title} />
-          </Flex>
-        </Box>
-      </Flex>
+      <Box border="1px" borderColor="yellow.500" borderRadius="5px">
+        <Image src={img} alt={title}/>
+        <Flex justifyContent="space-around">
+          <Box p="24px">
+            <Heading
+              fontFamily="Barlow"
+              fontWeight="semibold"
+              fontSize="20px"
+              color="gray.500"
+              mb="12px"
+            >
+              {title}
+            </Heading>
+            <Text fontFamily="Barlow" fontSize="16px" color="gray.400">
+              {text}
+            </Text>
+          </Box>
+          <Image src={icon} alt={title} />
+        </Flex>
+      </Box>
     </>
   );
 }

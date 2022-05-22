@@ -1,28 +1,27 @@
-import { Box, Heading, HStack } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import { EuropeCities } from "./EuropeCities";
 
 export function EuropeCitiesData() {
   return (
     <Box
-      maxW="1160px"
+      maxW="1250px"
       w="100%"
-      maxH="1531px"
-      h="100%"
       mx="auto"
       mt={{ base: "32px", sm: "80px" }}
-      gap="48px"
+      mb="20px"
     >
       <Heading
-        ml="16px"
         fontWeight="medium"
         fontSize={{ base: "24px", sm: "36px" }}
         color="gray.500"
       >
         Cidades +100
       </Heading>
-      <HStack
+      <Flex
         mt="40px"
+        justifyContent={{ base: "center", sm: "space-between" }}
         wrap="wrap"
+        gap="48px"
       >
         <EuropeCities
           img="/londres.png"
@@ -54,7 +53,7 @@ export function EuropeCitiesData() {
           text="Holanda"
           icon="/iconHolanda.svg"
         />
-      </HStack>
+      </Flex>
     </Box>
   );
 }
