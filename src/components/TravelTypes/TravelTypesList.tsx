@@ -7,16 +7,19 @@ interface TravelTypesListProps {
 
 export function TravelTypesList({ img, text }: TravelTypesListProps) {
   const isWideVersion = useBreakpointValue({
-    base: true,
-    sm: false,
+    base: false,
+    sm: true,
   });
+
+  console.log(isWideVersion);
 
   return (
     <Flex align="center" direction={{ base: "row", sm: "column" }} justify="center">
       {isWideVersion ? (
-        <Image src="YellowDot.png" alt="YellowDot" />
-      ) : (
         <Image src={img} alt={text} />
+        
+      ) : (
+        <Image src="YellowDot.png" alt="YellowDot" />
       )}
       <Text
         color="gray.500"
